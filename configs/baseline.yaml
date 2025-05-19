@@ -1,0 +1,13 @@
+# === Dataset & paths =======================================================
+checkpoint: checkpoints/fasterrcnn_baseline.pth     # saved automatically
+loss_history: checkpoints/loss_history_baseline.csv        # CSV metric log
+
+# === Training ============================================================== 
+epochs: 30
+batch_size: 1
+learning_rate: 0.0001
+seed: 42                  # ✅ so splits & init are deterministic
+
+# === Hardware / misc =======================================================
+device: cuda              # "cpu" to force CPU, "cuda:0" for multi-GPU select
+num_workers: 4            # DataLoader workers
