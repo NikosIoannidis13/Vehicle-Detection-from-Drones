@@ -52,7 +52,7 @@ Pneuma_Vision/
     ├── Labels_axis_aligned/     # annotations with the created upright bounding boxes
     └── Labels_YOLO_upright/     # annotations in YOLO format that will be used for training
 
-UAV_RECOGNITION/
+Vehicle Detection from Drones/
 ├── checkpoints/
 │   ├── fasterrcnn_baseline.pth            # your saved checkpoint
 │   └── loss_history_baseline.csv          # your saved loss history
@@ -72,6 +72,7 @@ UAV_RECOGNITION/
 ├── requirements.txt
 └── .gitignore
 
+``` 
 
 # 1️⃣  Clone & install
 git clone https://github.com/your‑user/pneuma‑vision‑det && cd pneuma‑vision‑det
