@@ -35,9 +35,10 @@ This repository contains everything required to 
 
 ---
 
-## Quick Start
-Before you start make sure that your data folder has the following structure :
+## Quick Start
+Before you start make sure that your data folder has the following structure:
 
+```text
 Pneuma_Vision/
 ├── 20181029_D2_0930_1000/       # downloaded dataset
 │   ├── Annotations/
@@ -49,9 +50,7 @@ Pneuma_Vision/
     ├── Annotations/             # The annotations without processing that we downloaded
     ├── Frames/                  # drone images
     ├── Labels_axis_aligned/     # annotations with the created upright bounding boxes
-    ├── Labels_YOLO_upright/     # annotations in YOLO format that will be used for training
-
-Also make sure that your project folder has the following structure :
+    └── Labels_YOLO_upright/     # annotations in YOLO format that will be used for training
 
 UAV_RECOGNITION/
 ├── checkpoints/
@@ -64,14 +63,15 @@ UAV_RECOGNITION/
 │       ├── train.py
 │       ├── data.py
 │       ├── inference.py
-│       ├── model.py
+│       └── model.py
 ├── utils/
 │   ├── bbox_functions.py
 │   ├── process_bounding_box.py
-│   ├── process.py
+│   └── process.py
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+
 
 # 1️⃣  Clone & install
 git clone https://github.com/your‑user/pneuma‑vision‑det && cd pneuma‑vision‑det
