@@ -73,9 +73,14 @@ Vehicle Detection from Drones/
 ``` 
 
 # 1️⃣  Clone & install
-git clone https://github.com/your‑user/pneuma‑vision‑det && cd pneuma‑vision‑det
-pip install -r requirements.txt  # or: conda env create -f env.yml
+Download the entire project here
+```bash
+https://github.com/NikosIoannidis13/Vehicle-Detection-from-Drones.git
+```
 
+```bash
+pip install -r requirements.txt 
+```
 # 2️⃣  Download dataset
 Download Pneuma Vision datasets in the following link https://zenodo.org/records/7426506
 
@@ -91,7 +96,7 @@ python3 process.py --base_dir '/home/nikos2/Desktop/Data/Pneuma Vision' --drone 
 --dont_show : whenever the results to be shown on the screen
 --stage : if you want the whole process to be shown on your screen (generate bounding boxes & export them to YOLO format)
 ```
-# 5️⃣  Create the Configuration file
+# 4️⃣  Create the Configuration file
 All runtime options live in a single YAML file. The reposit.ory ships with configs/baseline.yaml. In the configuration you can also specify the checkpoint path and the loss history path if you want to load your model from a specific checkpoint. Those files should be in the checkpoints directory
 
 # 5️⃣  Train Faster R‑CNN
@@ -102,7 +107,7 @@ python3 'src/Faster R-CNN/train.py' --root_dir '/home/nikos2/Desktop/Data/Pneuma
 ```text
 --root_dir : The specific directory where your model will be trained on
 ```
-## Evaluation & Inference
+# 6️⃣ Evaluation & Inference
 Now we run an inference of the model with the following command. The script will take input images and for each image will predict and draw bounding boxes for the vehicles of each image and save the annotations of the bounding boxes for each file in a csv. We ran the following command :
 ```bash
 python3 'src/Faster R-CNN/inference.py' --checkpoint checkpoints/fasterrcnn_baseline.pth --input_dir '/home/nikos2/Desktop/Data/Pneuma Vision/20181029_D6_0900_0930/Frames2' --output_dir '/home/nikos2/Desktop/Data/Pneuma Vision/20181029_D6_0900_0930' --csv_dir '/home/nikos2/Desktop/Data/Pneuma Vision/20181029_D6_0900_0930' --conf 0.5
