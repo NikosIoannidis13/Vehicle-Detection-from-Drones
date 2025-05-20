@@ -120,7 +120,7 @@ python3 'src/Faster R-CNN/inference.py' --checkpoint checkpoints/fasterrcnn_base
 --conf         : Minimum confidence score to retain a detection.
 ```
 # 7️⃣ Evaluation & Inference
-An example of results of inference is shown in the inference_example.jpg that is include in the repo
+An example of results of inference is shown in the inference_example.jpg that is included in the results folder of the repo.
 
 ## Environment / Requirements
 
@@ -134,12 +134,12 @@ An example of results of inference is shown in the inference_example.jpg that is
 
 ## Results
 
-| Model                  | Input res | mAP<sub>50:95</sub> | mAP<sub>50</sub> | FPS (T4) |
-| ---------------------- | --------- | ------------------- | ---------------- | -------- |
-| Faster R‑CNN ResNet‑50 | 1024      | **0.51**            | 0.78             | 12       |
-| YOLOv8‑L (re‑impl)     | 1024      | 0.47                | 0.74             | **58**   |
+| Model                  | mAP<sub>50:95</sub> | mAP<sub>50</sub>  |
+| ---------------------- | ------------------- | ---------------- 
+| Faster R‑CNN ResNet‑50 | **0.382**           | 0.621             |
+| YOLOv8‑L (re‑impl)     | 0.371               | 0.593             | 
 
-*(Numbers computed on drones 9‑10 validation split, May 19 2025.)*
+*(Numbers computed on drone 6 validation split, May 19 2025.)*
 
 ---
 
@@ -175,8 +175,3 @@ If you use this repo, please cite pNEUMA and the toolbox:
 
 Thanks to the pNEUMA consortium for releasing the original trajectory dataset and to **E. Barmpounakis et al.** for extending it with Vision annotations.
 
-python3 process.py --base_dir '/home/nikos2/Desktop/Data/Pneuma Vision' --drone 6 --session 3 --dont_show --stage all
-
-python3 'src/Faster R-CNN/train.py' --root_dir '/home/nikos2/Desktop/Data/Pneuma Vision/20181029_D6_0900_0930'
-
-python3 'src/Faster R-CNN/inference.py' --checkpoint checkpoints/fasterrcnn_baseline.pth --input_dir '/home/nikos2/Desktop/Data/Pneuma Vision/20181029_D6_0900_0930/Frames2' --output_dir '/home/nikos2/Desktop/Data/Pneuma Vision/20181029_D6_0900_0930' --csv_dir '/home/nikos2/Desktop/Data/Pneuma Vision/20181029_D6_0900_0930' --conf 0.5
