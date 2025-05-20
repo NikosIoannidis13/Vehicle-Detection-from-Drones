@@ -119,6 +119,9 @@ python3 'src/Faster R-CNN/inference.py' --checkpoint checkpoints/fasterrcnn_base
 --csv_dir      : Path to save individual CSV files for each image.
 --conf         : Minimum confidence score to retain a detection.
 ```
+7️⃣
+An example of results of inference is shown in the image below
+
 ## Environment / Requirements
 
 * Python ≥ 3.10
