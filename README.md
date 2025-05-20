@@ -29,10 +29,6 @@ This repository contains everything required to 
 * **Train** a **Faster R‑CNN + FPN** model (PyTorch / `torchvision`).
 * **On‑the‑fly convert** YOLO labels → COCO format inside a custom `PneumaDataset` class—so we keep disk usage low while feeding COCO‑style targets to the detector.
 
-<p align="center">
-  <img src="docs/pipeline.svg" width="640" alt="Pipeline diagram showing download → bbox → YOLO → PyTorch" />
-</p>
-
 ---
 
 ## Quick Start
@@ -96,7 +92,7 @@ python3 process.py --base_dir '/home/nikos2/Desktop/Data/Pneuma Vision' --drone 
 --stage : if you want the whole process to be shown on your screen (generate bounding boxes & export them to YOLO format)
 ```
 # 5️⃣  Create the Configuration file
-All runtime options live in a single YAML file. The repository ships with configs/baseline.yaml. In the configuration you can also specify the checkpoint path and the loss history path if you want to load your model from a specific checkpoint. Those files should be in the checkpoints directory
+All runtime options live in a single YAML file. The reposit.ory ships with configs/baseline.yaml. In the configuration you can also specify the checkpoint path and the loss history path if you want to load your model from a specific checkpoint. Those files should be in the checkpoints directory
 
 # 5️⃣  Train Faster R‑CNN
 Now we train the model. An example of a command is given below :
