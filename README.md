@@ -87,34 +87,37 @@ Download Pneuma Vision datasets in the following link https://zenodo.org/records
 We generate axis align bounding boxes and export them in the directory inside the dataset to YOLO format. An example of such a command is given below
 ```bash
 python3 process.py --base_dir '/home/nikos2/Desktop/Data/Pneuma Vision' --drone 6 --session 3 --dont_show --stage all
-
+```
+```text
 --base_dir : The directory where all datasets are saved
 --drone : number of drone
 --session : number of session
 --dont_show : whenever the results to be shown on the screen
 --stage : if you want the whole process to be shown on your screen (generate bounding boxes & export them to YOLO format)
-
+```
 # 5️⃣  Create the Configuration file
 All runtime options live in a single YAML file. The repository ships with configs/baseline.yaml. In the configuration you can also specify the checkpoint path and the loss history path if you want to load your model from a specific checkpoint. Those files should be in the checkpoints directory
 
 # 5️⃣  Train Faster R‑CNN
 Now we train the model. An example of a command is given below :
-
+```bash
 python3 'src/Faster R-CNN/train.py' --root_dir '/home/nikos2/Desktop/Data/Pneuma Vision/20181029_D6_0900_0930'
-
+```
+```text
 --root_dir : The specific directory where your model will be trained on
-
+```
 ## Evaluation & Inference
 Now we run an inference of the model with the following command. The script will take input images and for each image will predict and draw bounding boxes for the vehicles of each image and save the annotations of the bounding boxes for each file in a csv. We ran the following command :
-
+```bash
 python3 'src/Faster R-CNN/inference.py' --checkpoint checkpoints/fasterrcnn_baseline.pth --input_dir '/home/nikos2/Desktop/Data/Pneuma Vision/20181029_D6_0900_0930/Frames2' --output_dir '/home/nikos2/Desktop/Data/Pneuma Vision/20181029_D6_0900_0930' --csv_dir '/home/nikos2/Desktop/Data/Pneuma Vision/20181029_D6_0900_0930' --conf 0.5
-
+```
+```text
 --checkpoint   : On which saved model we will make predictions 
 --input_dir    : Path to the folder containing images for inference.
 --output_dir   : Path to save the processed images with bounding boxes.
 --csv_dir      : Path to save individual CSV files for each image.
 --conf         : Minimum confidence score to retain a detection.
-
+```
 ## Environment / Requirements
 
 * Python ≥ 3.10
