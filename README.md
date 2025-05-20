@@ -120,7 +120,7 @@ python3 'src/Faster R-CNN/inference.py' --checkpoint checkpoints/fasterrcnn_base
 --conf         : Minimum confidence score to retain a detection.
 ```
 # 7️⃣ Evaluation & Inference
-An example of results of inference is shown in the inference_example.jpg that is included in the results folder of the repo.
+An example of results of inference is shown in the inference_example.jpg that is included in the results folder of the repo. You can see the video of all frames of Drone 6 and Session 6 in the Release --> Assets --> predictions_video.mp4
 
 ## Environment / Requirements
 
