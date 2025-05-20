@@ -51,7 +51,9 @@ Pneuma_Vision/
     ├── Frames/                  # drone images
     ├── Labels_axis_aligned/     # annotations with the created upright bounding boxes
     └── Labels_YOLO_upright/     # annotations in YOLO format that will be used for training
-
+``` 
+Also make sure that the project folder has the following structure:
+```
 Vehicle Detection from Drones/
 ├── checkpoints/
 │   ├── fasterrcnn_baseline.pth            # your saved checkpoint
