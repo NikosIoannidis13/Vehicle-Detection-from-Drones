@@ -85,9 +85,9 @@ Download Pneuma Vision datasets in the following link https://zenodo.org/records
 
 # 3️⃣  Generate bounding boxes (axis‑aligned) and Export them to YOLO format 
 We generate axis align bounding boxes and export them in the directory inside the dataset to YOLO format. An example of such a command is given below
-
+```bash
 python3 process.py --base_dir '/home/nikos2/Desktop/Data/Pneuma Vision' --drone 6 --session 3 --dont_show --stage all
-
+```bash
 --base_dir : The directory where all datasets are saved
 --drone : number of drone
 --session : number of session
