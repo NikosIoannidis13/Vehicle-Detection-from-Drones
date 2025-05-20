@@ -75,7 +75,7 @@ Vehicle Detection from Drones/
 # 1️⃣  Clone & install
 Download the entire project here
 ```bash
-https://github.com/NikosIoannidis13/Vehicle-Detection-from-Drones.git
+git clone https://github.com/NikosIoannidis13/Vehicle-Detection-from-Drones.git
 ```
 
 ```bash
